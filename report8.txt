@@ -1,0 +1,82 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 92.81      8.52     8.52                             dijkstor::routalg(int, int, std::vector<edge, std::allocator<edge> >&, int)
+  1.85      8.69     0.17  2013891     0.00     0.00  void std::__adjust_heap<__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless>)
+  1.85      8.86     0.17                             void std::vector<edge, std::allocator<edge> >::_M_emplace_back_aux<edge>(edge&&)
+  1.47      9.00     0.14 31680198     0.00     0.00  std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&)
+  1.09      9.10     0.10                             std::pair<std::_Rb_tree_iterator<std::pair<int, int> >, bool> std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_insert_unique<std::pair<int, int> >(std::pair<int, int>&&)
+  0.33      9.13     0.03      100     0.30     1.65  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&)
+  0.22      9.15     0.02     1756     0.01     0.01  void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_emplace_back_aux<std::pair<int, int> >(std::pair<int, int>&&)
+  0.22      9.17     0.02                             std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*)
+  0.16      9.18     0.02                             std::_Hashtable<int, std::pair<int const, levelGraph>, std::allocator<std::pair<int const, levelGraph> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::~_Hashtable()
+  0.00      9.18     0.00  1686653     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&)
+  0.00      9.18     0.00        5     0.00     0.00  std::_Hashtable<int, std::pair<int const, levelGraph>, std::allocator<std::pair<int const, levelGraph> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, levelGraph>, false>*)
+  0.00      9.18     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN10parallelor8allocateEiRSt6vectorI4edgeSaIS1_EEi
+  0.00      9.18     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
+  0.00      9.18     0.00        1     0.00     0.00  __sti____cudaRegisterAll_46_tmpxft_00006447_00000000_10_parallelor_cpp1_ii_902d7c5c()
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) for 0.11% of 9.18 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     96.7    8.52    0.36                 dijkstor::routalg(int, int, std::vector<edge, std::allocator<edge> >&, int) [1]
+                0.17    0.00 2013891/2013891     void std::__adjust_heap<__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless>) [2]
+                0.03    0.14     100/100         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [4]
+                0.02    0.00    1756/1756        void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_emplace_back_aux<std::pair<int, int> >(std::pair<int, int>&&) [7]
+                0.00    0.00 1686653/1686653     void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) [239]
+-----------------------------------------------
+                0.17    0.00 2013891/2013891     dijkstor::routalg(int, int, std::vector<edge, std::allocator<edge> >&, int) [1]
+[2]      1.9    0.17    0.00 2013891         void std::__adjust_heap<__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless>) [2]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]      1.9    0.17    0.00                 void std::vector<edge, std::allocator<edge> >::_M_emplace_back_aux<edge>(edge&&) [3]
+-----------------------------------------------
+                0.03    0.14     100/100         dijkstor::routalg(int, int, std::vector<edge, std::allocator<edge> >&, int) [1]
+[4]      1.8    0.03    0.14     100         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [4]
+                0.14    0.00 31680198/31680198     std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [5]
+-----------------------------------------------
+                0.14    0.00 31680198/31680198     std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [4]
+[5]      1.5    0.14    0.00 31680198         std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [5]
+-----------------------------------------------
+                                                 <spontaneous>
+[6]      1.1    0.10    0.00                 std::pair<std::_Rb_tree_iterator<std::pair<int, int> >, bool> std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_insert_unique<std::pair<int, int> >(std::pair<int, int>&&) [6]
+-----------------------------------------------
+                0.02    0.00    1756/1756        dijkstor::routalg(int, int, std::vector<edge, std::allocator<edge> >&, int) [1]
+[7]      0.2    0.02    0.00    1756         void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_emplace_back_aux<std::pair<int, int> >(std::pair<int, int>&&) [7]
+-----------------------------------------------
+                               48521             std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [8]
+[8]      0.2    0.02    0.00       0+48521   std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [8]
+                               48521             std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[9]      0.2    0.02    0.00                 std::_Hashtable<int, std::pair<int const, levelGraph>, std::allocator<std::pair<int const, levelGraph> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::~_Hashtable() [9]
+-----------------------------------------------
+                0.00    0.00 1686653/1686653     dijkstor::routalg(int, int, std::vector<edge, std::allocator<edge> >&, int) [1]
+[239]    0.0    0.00    0.00 1686653         void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) [239]
+-----------------------------------------------
+                0.00    0.00       5/5           std::__detail::_Map_base<int, std::pair<int const, levelGraph>, std::allocator<std::pair<int const, levelGraph> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) [1127]
+[240]    0.0    0.00    0.00       5         std::_Hashtable<int, std::pair<int const, levelGraph>, std::allocator<std::pair<int const, levelGraph> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, levelGraph>, false>*) [240]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [1148]
+[241]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN10parallelor8allocateEiRSt6vectorI4edgeSaIS1_EEi [241]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [1148]
+[242]    0.0    0.00    0.00       1         _GLOBAL__sub_I_main [242]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [1148]
+[243]    0.0    0.00    0.00       1         __sti____cudaRegisterAll_46_tmpxft_00006447_00000000_10_parallelor_cpp1_ii_902d7c5c() [243]
+-----------------------------------------------
+
+Index by function name
+
+ [241] _GLOBAL__sub_I__ZN10parallelor8allocateEiRSt6vectorI4edgeSaIS1_EEi [9] std::_Hashtable<int, std::pair<int const, levelGraph>, std::allocator<std::pair<int const, levelGraph> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::~_Hashtable() [5] std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&)
+ [242] _GLOBAL__sub_I_main     [3] void std::vector<edge, std::allocator<edge> >::_M_emplace_back_aux<edge>(edge&&) [6] std::pair<std::_Rb_tree_iterator<std::pair<int, int> >, bool> std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_insert_unique<std::pair<int, int> >(std::pair<int, int>&&)
+ [243] __sti____cudaRegisterAll_46_tmpxft_00006447_00000000_10_parallelor_cpp1_ii_902d7c5c() [4] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [8] std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*)
+   [1] dijkstor::routalg(int, int, std::vector<edge, std::allocator<edge> >&, int) [7] void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_emplace_back_aux<std::pair<int, int> >(std::pair<int, int>&&) [2] void std::__adjust_heap<__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, long, long, std::pair<int, int>, __gnu_cxx::__ops::_Iter_comp_iter<pairless>)
+ [240] std::_Hashtable<int, std::pair<int const, levelGraph>, std::allocator<std::pair<int const, levelGraph> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, levelGraph>, false>*) [239] void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&)
